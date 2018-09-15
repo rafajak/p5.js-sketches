@@ -1,80 +1,119 @@
 
-
-let bubble = [];
-
-function setup() {
-    createCanvas(windowWidth, windowHeight);
+// stage = 0: 
 
 
 
 
-    for (i = 0; i<2000; i++) {
-
-    let x = random(0,windowWidth);
-    let y = random(0,windowHeight);
-
-    let r = random(5,30);
-
-	let vx = null;
-	let vy = null;
-
-    let fill_ = color(random(0,20),random(0,20),random(150,200),random(0,200));
-;
 
 
-		bubble[i] = new Bubble(x,y,r,vx,vy,fill_)
+let blobs = [];
+let stage = 0;
+
+function setup() { 
+	createCanvas(windowWidth, windowHeight);
+
+	blob1 = new Blob(width/2, height/2, 200);
+	blob2 = new Blob(mouseX,mouseY, 100);
 }
 
-}
+
+
 
 function draw() {
-	background(0,20,100);
+	background(0); 
+		if (stage == 1) { 
+					background(255,51,102);
+					blob1.brightness = (231,29,54);
 
-	for (let obj of bubble) { 
-		obj.show();
-		obj.move();
-		// obj.clicked();
-	}
-
-}
-
-
-class Bubble {
-	 constructor(x,y,r,vx,vy,fill_) {
-		this.x  = x;
-		this.y = y;
-		this.r = r;
-		this.vx = vx;
-		this.vy = vy;
-		this.fill_ = fill_
-	}
-
-	show() {
-		fill(this.fill_);
-		noStroke();
-		ellipse(this.x,this.y,this.r*2);
-	}
-
-	move() {
-		this.x  = this.x+random(-0.5,0.5);
-		this.y  = this.y+random(-0.5,0.5);
-	}
-
-	clicked() {
-		background(random(0,255));
-
-		if (dist(mouseX,mouseY,this.x,this.y) <= this.r) { 
-			this.fill_ = 255;
-			console.log(this.fill_);
 		}
 
+	if (blob1.intersection(blob2.x, blob2.y, blob2.l)) {
+		background(60,170,180);
+
+
+	if ((blob1.l > windowWidth) && (blob1.l > windowHeight)) {
+		
+		blob2.brightness = 255;
+		blob1.l = 255;
+		
+		blob1.brightness = (231,29,54);
+
+		stage = 1;
+
 	}
+
+		
+	}
+
+	noStroke();
+	fill(255);
+
+	blob1.show();
+		blob1.move();
+
+	blob2.show();
+			blob1.move();
+
+		blob2.x = mouseX;
+		blob2.y = mouseY;
+
+
 }
 
 
-function mouseDragged() { 
-	for (let i = 0; i < bubble.length; i++) {
-	 bubble[i].clicked();
+class Blob { 
+	constructor(x,y,l,number) { 
+
+		this.x = x;
+		this.y = y;
+		this.l = l;
+		this.number = number;
+		this.brightness = 255;
 	}
+
+	show() { 
+		fill(this.brightness);
+		ellipse(this.x, this.y, this.l);	
 	}
+
+
+	move() { 
+		this.x += random(-0.5,0.5) 
+		this.y += random(-0.5,0.5) 
+	}
+
+	contains(px,py) { 
+
+		if (dist(this.x, this.y, px, py) < this.l) {
+			return true;
+		} else { 
+			return false;
+
+				}
+		}
+
+   intersection(blob2x, blob2y, blob2l) {
+
+	if (dist(this.x,this.y,blob2x,blob2y) < (this.l/2 - blob2l/2)) { 
+		return true;
+	 } else {
+		return false; 
+	 }
+	}
+
+
+
+
+
+}
+
+
+	function mousePressed() {
+		
+		if (blob1.intersection(blob2.x, blob2.y, blob2.l)) {
+
+			blob1.l *=1.5;
+		}
+	}	
+
 
