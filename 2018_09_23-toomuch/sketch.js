@@ -3,7 +3,7 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-    for (let i=0; i<10; i++) {
+    for (let i=0; i<20; i++) {
     let x0 = random(width);
     let y0 = random(height);
 	let r0 = 3;
@@ -99,6 +99,11 @@ class Circle {
 		let vec = createVector(this.x,this.y);
 		this.history.push(vec);
 
+		for (var i =0; i<this.history.length; i++) {
+			this.history[i].x += vx/50 + random(-1,1);
+			this.history[i].y += vy/50 + random(-1,1);
+
+		}
 		if (this.history.length > this.mem) {
 			this.history.splice(0,1);
 
