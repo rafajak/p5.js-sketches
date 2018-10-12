@@ -32,7 +32,7 @@ function draw() {
 			let keypoint = poses[i].pose.keypoints[j];
 			noseX = poses[0].pose.keypoints[0].position["x"]
 			noseY = poses[0].pose.keypoints[0].position["y"]
-			ellipse(noseX, noseY, 20, 20);
+			ellipse(width - noseX, noseY, 20, 20);
 
 		}
 	}
