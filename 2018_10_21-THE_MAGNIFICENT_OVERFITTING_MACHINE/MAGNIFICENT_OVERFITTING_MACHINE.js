@@ -9,7 +9,7 @@ y_vals = [];
 let a, b, c, d;
 let dragging = false;
 
-let learningRate = 0.2;
+let learningRate = 0.4;
 let optimizer = tf.train.adam(learningRate);
 
 function setup() {
@@ -141,7 +141,7 @@ function draw() {
     line(x1, y1, x2, y2);
     strokeWeight(0.5)
     textSize(10);
-    text("I messed something up and linear regression doesn't work", width / 2, height / 2)
+    text("I messed something up and linear regression doesn't work, sorry", width / 2, height / 2)
     _y.dispose();
     // ys.dispose();
 
