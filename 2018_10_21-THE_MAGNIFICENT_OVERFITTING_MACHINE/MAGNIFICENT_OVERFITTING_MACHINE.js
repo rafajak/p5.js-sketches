@@ -86,7 +86,7 @@ function draw() {
   textSize(12);
   textFont("Comic Sans MS");
   textAlign(CENTER);
-  text('Select the polynomial degree', width / 2 - 15, 80);
+  text('Select the polynomial degree (the higher, the more magnificent)', width / 2 - 15, 80);
 
   textSize(30);
   textAlign(CENTER);
