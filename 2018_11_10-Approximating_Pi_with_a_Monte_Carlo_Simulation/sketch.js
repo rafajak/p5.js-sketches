@@ -25,7 +25,7 @@ function draw() {
 	draw_points()
 
 	pi = calculate_pi()
-	console.log(calculate_pi())
+// 	console.log(calculate_pi())
 	stroke(0);
 	fill(255);
 	strokeWeight(0.5)
