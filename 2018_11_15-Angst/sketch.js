@@ -2,8 +2,7 @@ let points = []
 number_of_points = 200
 
 function setup() {
-	createCanvas(640, 640);
-	// p1 = new Point1(200,100);
+	createCanvas(400, 400);
 
 	for (i = 0; i < number_of_points; i++) {
 		points.push(new Point1(choose([0, width]), random(0, height)))
