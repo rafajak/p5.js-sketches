@@ -63,7 +63,7 @@ class Point1 {
 	}
 
 	drawConnection() {
-		strokeWeight(map(dist(mouseX, mouseY, windowWidth / 2, windowHeight / 2), 0, windowWidth / 2, 0, 15));
+		strokeWeight(map(dist(mouseX, mouseY, width / 2, height / 2), 0, width / 2, 0, 15));
 		stroke(map(dist(this.x, this.y, points[this.mate].x, points[this.mate].y), 0, width / 2, 0, 60));
 		line(this.x, this.y,
 			points[this.mate].x, points[this.mate].y)
