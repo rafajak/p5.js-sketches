@@ -1,4 +1,4 @@
-Just some p5js doodles I made. Some of these are interactive, and some of the interactive ones use machine learning magic through tensorflow.js or ml5.
+Just some p5js doodles I made. Some of these are interactive (<img src="Interactive_icon.png" alt="it's interactive" width="15"/>), and some of the interactive ones use machine learning magic through tensorflow.js or ml5.
 
 Note: They probably don't work well on mobile devices.
 
@@ -14,7 +14,7 @@ Note: They probably don't work well on mobile devices.
 ## 10. [The Magnificent Overfitting Machine](https://rafajak.github.io/p5.js-sketches/2018_10_21-THE_MAGNIFICENT_OVERFITTING_MACHINE) <img src="Interactive_icon.png" alt="it's interactive" width="15"/> (based on Daniel Shiffman's work)
 ## 11. [Bambetle](https://rafajak.github.io/p5.js-sketches/2018_11_01-Bambetle) <img src="Interactive_icon.png" alt="it's interactive" width="15"/>
 ## 12. [Approximating Pi with a Monte Carlo simulation](https://rafajak.github.io/p5.js-sketches/2018_11_10-Approximating_Pi_with_a_Monte_Carlo_Simulation) (spoiler: it's 3.141592)
-## 13. [Angst](https://rafajak.github.io/p5.js-sketches/2018_11_15-Angst) <img src="Interactive_icon.png" alt="it's interactive" width="15"/>
+## 13. [Angst](https://rafajak.github.io/p5.js-sketches/2018_11_15-Angst) <img src="Interactive_icon.png" alt="it's interactive" width="15"/> (music by Marta Kaczmarek)
 
 by Raf Jakubanis
 
