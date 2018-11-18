@@ -9,7 +9,7 @@ y_vals = [];
 let a, b, c, d;
 let dragging = false;
 
-let learningRate = 0.4;
+let learningRate = 0.2;
 let optimizer = tf.train.adam(learningRate);
 
 function setup() {
