@@ -1,4 +1,4 @@
-Just some p5js doodles I made. Some of these are interactive, and some of the interactive ones use machine learning magic ®
+Just some p5js doodles I made. Some of these are interactive, and some of the interactive ones use machine learning magic through tensorflow.js or ml5.
 
 Note: They probably don't work well on mobile devices.
 
