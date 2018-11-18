@@ -1,4 +1,4 @@
-Just doodling with p5.js.
+Just some p5js doodles I made. Some of these are interactive, and a few of those have elements of machine learning magic.
 
 ## 1. [Moving dots](https://rafajak.github.io/p5.js-sketches/2018_08_05-moving_dots)
 ## 2. [Mouse interaction](https://rafajak.github.io/p5.js-sketches/2018_08_12-mouse_interaction)  <img src="Interactive_icon.png" alt="it's interactive" width="15"/> 
