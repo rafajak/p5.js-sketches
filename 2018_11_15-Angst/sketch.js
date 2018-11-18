@@ -34,7 +34,7 @@ function draw() {
 	// var speed = map(mouseY, 0.1, height, 0, 2);
 	speed = map(dist(mouseX, mouseY, width / 2, height / 2), 0, windowWidth / 2, 1, 4);
 	song.rate(speed);
-	song.amp(0.5);
+	song.amp(0.1);
 
 }
 
