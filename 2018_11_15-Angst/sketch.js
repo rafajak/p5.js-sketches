@@ -33,7 +33,6 @@ function draw() {
 	// Changing the rate alters the pitch
 	// var speed = map(mouseY, 0.1, height, 0, 2);
 	speed = map(dist(mouseX, mouseY, width / 2, height / 2), 0, windowWidth / 2, 1, 4);
-	speed = constrain(speed, 0.01, 1);
 	song.rate(speed);
 
 }
