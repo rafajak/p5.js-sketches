@@ -1,9 +1,14 @@
 let points = []
 number_of_points = 200
+var song;
+
+function preload() {
+	song = loadSound('assets/circus.mp3');
+}
 
 function setup() {
 	createCanvas(400, 400);
-
+	song.loop()
 	for (i = 0; i < number_of_points; i++) {
 		points.push(new Point1(choose([0, width]), random(0, height)))
 	}
@@ -23,6 +28,15 @@ function draw() {
 		p.drawConnection()
 
 	}
+	// Set the rate to a range between 0.1 and 4
+	// Changing the rate alters the pitch
+	// var speed = map(mouseY, 0.1, height, 0, 2);
+	var speed = map(dist(mouseX, mouseY, width / 2, height / 2), 0, windowWidth / 2, 1, 4));
+
+
+
+speed = constrain(speed, 0.01, 1);
+song.rate(speed);
 
 }
 
@@ -63,7 +77,7 @@ class Point1 {
 	}
 
 	drawConnection() {
-		strokeWeight(map(dist(mouseX, mouseY, width/2, height/2), 0, windowWidth / 2, 0, 10));
+		strokeWeight(map(dist(mouseX, mouseY, width / 2, height / 2), 0, windowWidth / 2, 0, 10));
 		stroke(map(dist(this.x, this.y, points[this.mate].x, points[this.mate].y), 0, width / 2, 0, 60));
 		line(this.x, this.y,
 			points[this.mate].x, points[this.mate].y)
