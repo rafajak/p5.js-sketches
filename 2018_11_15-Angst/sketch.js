@@ -1,6 +1,7 @@
 let points = []
 number_of_points = 200
-var song;
+let song
+let speed
 
 function preload() {
 	song = loadSound('assets/circus.mp3');
@@ -31,10 +32,7 @@ function draw() {
 	// Set the rate to a range between 0.1 and 4
 	// Changing the rate alters the pitch
 	// var speed = map(mouseY, 0.1, height, 0, 2);
-	var speed = map(dist(mouseX, mouseY, width / 2, height / 2), 0, windowWidth / 2, 1, 4);
-
-
-
+	speed = map(dist(mouseX, mouseY, width / 2, height / 2), 0, windowWidth / 2, 1, 4);
 	speed = constrain(speed, 0.01, 1);
 	song.rate(speed);
 
