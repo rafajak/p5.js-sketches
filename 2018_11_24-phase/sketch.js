@@ -8,7 +8,7 @@
 
 
 let circle = {
-	x: 80,
+	x: 340,
 	y: 450,
 	color: '255',
 	active: false,
@@ -16,8 +16,8 @@ let circle = {
 }
 
 function preload() {
-	song1 = loadSound('assets/d3.mp3');
-	song2 = loadSound('assets/d3.mp3');
+	song1 = loadSound('assets/8F2.WAV');
+	song2 = loadSound('assets/8F2.WAV');
 
 }
 
@@ -26,7 +26,6 @@ function setup() {
 	createCanvas(710, 600);
 	stable_wave = new SinWave();
 	song1.loop()
-
 	song2.loop()
 
 	_ = new SinWave();
@@ -38,7 +37,6 @@ function draw() {
 	fill(255);
 	stroke(255)
 	strokeWeight(10)
-	// rect(30, 31, 30, 31)
 	line(80, 450, 600, 450)
 	fill(60, 170, 180)
 	strokeWeight(3)
@@ -54,10 +52,14 @@ function draw() {
 	_.renderWave();
 	_.updatePeriod();
 
-	speed = map(_.period - stable_wave.period, -250, 0, 0.5, 1.0)
+	speed = map(circle.x, 80, 600, 0.5, 1.5)
 
+	song1.amp(1);
+	song1.pan(-0.7);
+
+	song2.amp(1);
+	song2.pan(0.7);
 	song2.rate(speed);
-	song2.amp(0.5);
 
 }
 class SinWave {
@@ -96,18 +98,14 @@ class SinWave {
 
 	renderWave() {
 		noStroke();
-		// fill(255);
-		// A simple way to draw the wave with an ellipse at each location
+
 		for (var x = width / 2 - this.yvalues.length; x < this.yvalues.length; x++) {
 			ellipse(x * this.xspacing, height / 2 + this.yvalues[x], 16, 16);
 		}
 	}
 
 	updatePeriod() {
-
-		// this.period = map(mouseX, 0, width, 10, 20)
-		// this.period = map(mouseX, 0, width, 250, 500)
-		this.period = map(circle.x, 80, 600, 250, 500)
+		this.period = map(circle.x, 80, 600, 750, 250)
 
 	}
 }
