@@ -1,12 +1,3 @@
-// var xspacing = 3; // Distance between each horizontal location
-// var w; // Width of entire wave
-// var theta = 0.0; // Start angle at 0
-// var amplitude = 75.0; // Height of wave
-// var period = 500.0; // How many pixels before the wave repeats
-// var dx; // Value for incrementing x
-// var yvalues; // Using an array to store height values for the wave
-
-
 let circle = {
 	x: 340,
 	y: 450,
@@ -16,8 +7,8 @@ let circle = {
 }
 
 function preload() {
-	song1 = loadSound('assets/8F2.WAV');
-	song2 = loadSound('assets/8F2.WAV');
+	song1 = loadSound('assets/8F2.wav');
+	song2 = loadSound('assets/8F2.wav');
 
 }
 
