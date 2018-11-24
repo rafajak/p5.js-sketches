@@ -1,5 +1,5 @@
 let circle = {
-	x: 340,
+	x: 345,
 	y: 450,
 	color: '255',
 	active: false,
