@@ -35,9 +35,9 @@ function draw() {
 
 	_.calcWave();
 	_.renderWave();
-	_.updatePeriod()
+	_.updatePeriod();
 
-	speed = map(Math.abs(_.period - stable_wave.period), 0, 99, 1, 1.1)
+	speed = map(Math.abs(_.period - stable_wave.period), 0, 99, 1, 2)
 
 
 	// map(mouseX, 0, width, 0.5, 1.5);
@@ -91,6 +91,8 @@ class SinWave {
 
 	updatePeriod() {
 
-		this.period = map(mouseX, 0, width, 500, 1)
+		// this.period = map(mouseX, 0, width, 10, 20)
+		this.period = map(mouseX, 0, width, 500, 100)
+
 	}
 }
