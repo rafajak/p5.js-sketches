@@ -133,9 +133,9 @@ function mousePressed() {
 // Run when the mouse/touch is dragging.
 function mouseDragged() {
 	if (circle.active) {
-		circle.x = constrain(circle.x + (mouseX - circle.x) * 0.1, 80, 600)
+		circle.x = constrain(circle.x + (mouseX - circle.x) * 0.05, 80, 600)
 
-		circle.y = constrain(circle.y + (mouseY - circle.y) * 0.1, 450, 450)
+		circle.y = constrain(circle.y + (mouseY - circle.y) * 0.05, 450, 450)
 
 	}
 	return false;
