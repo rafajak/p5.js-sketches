@@ -7,6 +7,13 @@
 // var yvalues; // Using an array to store height values for the wave
 
 
+let circle = {
+	x: 80,
+	y: 450,
+	color: '255',
+	active: false,
+	radius: 30,
+}
 
 function preload() {
 	song1 = loadSound('assets/d3.mp3');
@@ -15,7 +22,8 @@ function preload() {
 }
 
 function setup() {
-	createCanvas(710, 400);
+
+	createCanvas(710, 600);
 	stable_wave = new SinWave();
 	song1.loop()
 
@@ -27,24 +35,30 @@ function setup() {
 function draw() {
 
 	background(0);
-	fill(255)
+	fill(255);
+	stroke(255)
+	strokeWeight(10)
+	// rect(30, 31, 30, 31)
+	line(80, 450, 600, 450)
+	fill(60, 170, 180)
+	strokeWeight(3)
+
+	ellipse(circle.x, circle.y, circle.radius);
+	fill(255);
 
 	stable_wave.calcWave();
 	stable_wave.renderWave();
-	fill(60, 170, 180, 150)
+	fill(60, 170, 180)
 
 	_.calcWave();
 	_.renderWave();
 	_.updatePeriod();
 
-	speed = map(Math.abs(_.period - stable_wave.period), 0, 99, 1, 2)
+	speed = map(_.period - stable_wave.period, -250, 0, 0.5, 1.0)
 
-
-	// map(mouseX, 0, width, 0.5, 1.5);
-	// freq(10000)
 	song2.rate(speed);
 	song2.amp(0.5);
-	// song2.freq(freq);
+
 }
 class SinWave {
 	constructor(xspacing = 1,
@@ -92,7 +106,37 @@ class SinWave {
 	updatePeriod() {
 
 		// this.period = map(mouseX, 0, width, 10, 20)
-		this.period = map(mouseX, 0, width, 500, 100)
+		// this.period = map(mouseX, 0, width, 250, 500)
+		this.period = map(circle.x, 80, 600, 250, 500)
 
 	}
+}
+
+
+
+
+function mousePressed() {
+
+	distance = dist(mouseX, mouseY, circle.x, circle.y);
+	if (distance < circle.radius) {
+		circle.active = true;
+		circle.color = '200';
+	} else {
+		circle.active = false;
+		circle.color = '200';
+	}
+	return false;
+}
+
+
+
+// Run when the mouse/touch is dragging.
+function mouseDragged() {
+	if (circle.active) {
+		circle.x = constrain(circle.x + (mouseX - circle.x) * 0.1, 80, 600)
+
+		circle.y = constrain(circle.y + (mouseY - circle.y) * 0.1, 450, 450)
+
+	}
+	return false;
 }
