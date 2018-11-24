@@ -7,8 +7,8 @@ let circle = {
 }
 
 function preload() {
-	song1 = loadSound('assets/8F2.wav');
-	song2 = loadSound('assets/8F2.wav');
+	song1 = loadSound('assets/8I.wav');
+	song2 = loadSound('assets/8I.wav');
 
 }
 
@@ -45,11 +45,11 @@ function draw() {
 
 	speed = map(circle.x, 80, 600, 0.5, 1.5)
 
-	song1.amp(1);
-	song1.pan(-0.7);
+	song1.amp(0.5);
+	song1.pan(-0.8);
 
-	song2.amp(1);
-	song2.pan(0.7);
+	song2.amp(map(speed, 0.5, 1.5, 1, 0.3));
+	song2.pan(0.8);
 	song2.rate(speed);
 
 }
