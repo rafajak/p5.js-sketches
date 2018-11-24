@@ -110,6 +110,8 @@ function mousePressed() {
 	if (distance < circle.radius) {
 		circle.active = true;
 		circle.color = '200';
+	} else if ((mouseY < 470) & (mouseY > 430) & (mouseX < 620) & (mouseX > 70)) {
+		circle.x = constrain(mouseX, 80, 600)
 	} else {
 		circle.active = false;
 		circle.color = '200';
