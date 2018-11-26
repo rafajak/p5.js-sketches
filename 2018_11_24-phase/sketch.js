@@ -49,7 +49,7 @@ function draw() {
 	song1.amp(0.5);
 	song1.pan(-0.8);
 
-	song2.amp(map(speed, 0.5, 2, 1, 0.7));
+	song2.amp(map(speed, 0.5, 2, 1, 0.5));
 	song2.pan(0.8);
 	song2.rate(speed);
 
