@@ -16,8 +16,9 @@ function setup() {
 
 	createCanvas(710, 600);
 	stable_wave = new SinWave();
-	song1.loop()
-	song2.loop()
+
+	song1.loop();
+	song2.loop();
 
 	_ = new SinWave();
 }
@@ -29,26 +30,26 @@ function draw() {
 	stroke(255)
 	strokeWeight(10)
 	line(80, 450, 600, 450)
+
 	fill(60, 170, 180)
 	strokeWeight(3)
-
 	ellipse(circle.x, circle.y, circle.radius);
-	fill(255);
 
+	fill(255);
 	stable_wave.calcWave();
 	stable_wave.renderWave();
-	fill(60, 170, 180)
 
+	fill(60, 170, 180)
 	_.calcWave();
 	_.renderWave();
 	_.updatePeriod();
 
-	speed = map(circle.x, 80, 600, 0.5, 1.5)
+	updateSong2();
 
 	song1.amp(0.5);
 	song1.pan(-0.8);
 
-	song2.amp(map(speed, 0.5, 1.5, 1, 0.3));
+	song2.amp(map(speed, 0.5, 2, 1, 0.7));
 	song2.pan(0.8);
 	song2.rate(speed);
 
@@ -96,12 +97,15 @@ class SinWave {
 	}
 
 	updatePeriod() {
-		this.period = map(circle.x, 80, 600, 750, 250)
+		if (circle.x <= 348) {
+			this.period = map(circle.x - 348, 0, -268, 500, 1000)
+		} else {
+			this.period = map(circle.x - 348, 0, 252, 500, 250)
+
+		}
 
 	}
 }
-
-
 
 
 function mousePressed() {
@@ -120,14 +124,24 @@ function mousePressed() {
 }
 
 
-
 // Run when the mouse/touch is dragging.
 function mouseDragged() {
 	if (circle.active) {
-		circle.x = constrain(circle.x + (mouseX - circle.x) * 0.05, 80, 600)
+		circle.x = constrain(circle.x + (mouseX - circle.x) * 0.1, 80, 600)
 
-		circle.y = constrain(circle.y + (mouseY - circle.y) * 0.05, 450, 450)
+		circle.y = constrain(circle.y + (mouseY - circle.y) * 0.1, 450, 450)
 
 	}
 	return false;
+}
+
+
+
+function updateSong2() {
+	if (circle.x <= 348) {
+		speed = map(circle.x - 348, 0, -268, 1, 0.5)
+	} else {
+		speed = map(circle.x - 348, 0, 252, 1, 2)
+
+	}
 }
