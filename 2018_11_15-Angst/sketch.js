@@ -2,6 +2,7 @@ let points = []
 number_of_points = 200
 let song
 let speed
+let hide_text = false
 
 function preload() {
 	song = loadSound('assets/circus.mp3');
@@ -18,8 +19,7 @@ function setup() {
 function draw() {
 
 	background(255);
-	fill(255);
-	stroke(0);
+
 
 	for (let p of points) {
 
@@ -36,6 +36,15 @@ function draw() {
 	song.rate(speed);
 	song.amp(0.1);
 
+	fill(255);
+	stroke(0);
+	if (hide_text == false) {
+		fill(255);
+		stroke(0);
+		strokeWeight(3);
+		textSize(20);
+		text("Click anywhere to turn the sound on/off", width / 2 - 180, height / 2)
+	}
 }
 
 
@@ -85,5 +94,18 @@ class Point1 {
 function choose(choices) {
 	var index = Math.floor(Math.random() * choices.length);
 	return choices[index];
+
+}
+
+function mousePressed() {
+
+	hide_text = true
+
+	if (getAudioContext().state !== 'running') {
+		getAudioContext().resume();
+	} else {
+
+		getAudioContext().suspend()
+	}
 
 }
