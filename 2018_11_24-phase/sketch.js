@@ -6,14 +6,16 @@ let circle = {
 	radius: 30,
 }
 
+let hide_text = false
+
 function preload() {
 	song1 = loadSound('assets/8I.wav');
 	song2 = loadSound('assets/8I.wav');
 
 }
 
-function setup() {
 
+function setup() {
 	createCanvas(710, 600);
 	stable_wave = new SinWave();
 
@@ -30,6 +32,13 @@ function draw() {
 	stroke(255)
 	strokeWeight(10)
 	line(80, 450, 600, 450)
+	fill(255)
+
+	if (hide_text == false) {
+		strokeWeight(1)
+		textSize(30);
+		text("Click anywhere to start", 195, 520)
+	}
 
 	fill(60, 170, 180)
 	strokeWeight(3)
@@ -109,6 +118,12 @@ class SinWave {
 
 
 function mousePressed() {
+
+	hide_text = true
+
+	if (getAudioContext().state !== 'running') {
+		getAudioContext().resume();
+	}
 
 	distance = dist(mouseX, mouseY, circle.x, circle.y);
 	if (distance < circle.radius) {
