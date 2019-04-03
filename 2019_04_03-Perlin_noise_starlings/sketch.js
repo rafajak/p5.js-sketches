@@ -6,9 +6,9 @@ let t = 100;
 
 function draw() {
     x1 = mouseX
-    x2 = width * noise(0.01 * t, 5500)
-    x3 = width * noise(0.01 * t, 6500)
-    x4 = width * noise(0.01 * t, 7500)
+    x2 = width * noise(0.01 * t, 2500)
+    x3 = width * noise(0.01 * t, 3500)
+    x4 = width * noise(0.01 * t, 4500)
 
     y1 = mouseY
     y2 = height * noise(0.01 * t, 5500)
@@ -17,7 +17,7 @@ function draw() {
 
     t += random(1)
     stroke(0, 0, 0, 50);
-    strokeWeight(2)
+    strokeWeight(1)
     noFill();
 
 
