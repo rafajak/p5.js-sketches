@@ -1,4 +1,3 @@
-let hide_text = false
 
 
 var sound, amplitude, cnv;
@@ -24,13 +23,7 @@ function setup() {
 function draw() {
 
 
-	if (hide_text == false) {
-		fill(255);
-		stroke(0);
-		strokeWeight(3);
-		textSize(20);
-		text("Click anywhere for egg music", width / 2 - 180, height / 2)
-	}
+		
 
 	var level = amplitude.getLevel();
 	if (level > 0.1) {
