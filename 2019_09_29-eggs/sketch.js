@@ -52,7 +52,7 @@ function draw() {
 
 	}
 
-	if (level > 0.23) {
+	if (level > 0.24) {
 		egg_mode = false
 		fill(0)
 		noStroke()
