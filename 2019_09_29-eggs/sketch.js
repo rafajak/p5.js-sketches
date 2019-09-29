@@ -13,7 +13,7 @@ function setup() {
 	background(10) // start / stop the sound when canvas is clicked
 	cnv.mouseClicked(function () {
 		if (sound.isPlaying()) {
-			sound.stop();
+// 			sound.stop();
 		} else {
 			sound.play();
 		}
@@ -52,7 +52,7 @@ function draw() {
 
 	}
 
-	if (level > 0.23) {
+	if (level > 0.24) {
 		egg_mode = false
 		fill(0)
 		noStroke()
