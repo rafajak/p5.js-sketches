@@ -13,7 +13,7 @@ function setup() {
 	background(10) // start / stop the sound when canvas is clicked
 	cnv.mouseClicked(function () {
 		if (sound.isPlaying()) {
-// 			sound.stop();
+			sound.pause();
 		} else {
 			sound.play();
 		}
