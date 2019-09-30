@@ -1,10 +1,4 @@
-<< << << < HEAD
-	===
-	=== =
 
-
-	>>>
-	>>> > afa3242fc6d4284c92792c97be3f33455922bd1f
 var sound, amplitude, cnv;
 egg_mode = true
 
