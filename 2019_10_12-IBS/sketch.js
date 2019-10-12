@@ -38,7 +38,7 @@ function draw() {
 
 		background(0)
 
-		text("	    IBS3000", width / 2 - 60, height / 2)
+		text("PERLIN IBS3000", width / 2 - 65, height / 2)
 		strokeWeight(1);
 
 		textSize(12);
