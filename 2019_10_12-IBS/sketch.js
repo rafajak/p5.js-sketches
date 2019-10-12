@@ -14,6 +14,6 @@ function draw() {
 		fill(0)
 		noStroke()
 		n = noise(x * i / 10)
-		ellipse(i, map(n, 0, 1, 0, height), 50)
+		ellipse(i, map(n, 0, 1, 0, height), int(windowWidth / 29))
 	}
 }
