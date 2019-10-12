@@ -17,8 +17,8 @@ Note: They probably don't work well on mobile devices.
 ## 13. [Angst](https://rafajak.github.io/p5.js-sketches/2018_11_15-Angst) <img src="Interactive_icon.png" alt="it's interactive" width="15"/> (music by Marta Kaczmarek)
 ## 14. [Phasing](https://rafajak.github.io/p5.js-sketches/2018_11_24-phase) <img src="Interactive_icon.png" alt="it's interactive" width="15"/>
 ## 15. [Perlin noise starlings](https://rafajak.github.io/p5.js-sketches/2019_04_03-Perlin_noise_starlings) <img src="Interactive_icon.png" alt="it's interactive" width="15"/>
-## 16. [Eggs](https://rafajak.github.io/p5.js-sketches/2019_09_29-eggs) 
-## 17. [Knyp Generator](https://rafajak.github.io/p5.js-sketches/2019_10_06-tuner) [music by Raf Jakubanis]
+## 16. [Eggs](https://rafajak.github.io/p5.js-sketches/2019_09_29-eggs) [music by Raf Jakubanis]
+## 17. [Knyp Generator](https://rafajak.github.io/p5.js-sketches/2019_10_05-tuner) [music by Raf Jakubanis]
 ## 18. [Perlin IBS3000](https://rafajak.github.io/p5.js-sketches/2019_10_12-IBS) [music by Raf Jakubanis]
 
 by Raf Jakubanis
