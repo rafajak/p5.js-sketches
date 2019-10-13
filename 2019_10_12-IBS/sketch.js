@@ -19,7 +19,7 @@ function setup() {
 			display_text = true;
 		} else {
 			display_text = false;
-			sound.setVolume(0.3);
+			sound.setVolume(0.6);
 			sound.play();
 		}
 	})
