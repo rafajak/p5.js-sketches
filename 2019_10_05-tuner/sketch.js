@@ -97,9 +97,5 @@ function draw() {
 	if (level > 0.25) {
 		image(image_cache[int(random(image_cache.length))].image, 1 * 150, 1 * 150, 150, 150);
 
-	} <<
-	<< << < HEAD
-} ===
-=== =
-} >>>
->>> > d8d338b80a947e9d60c7020d6de085c4be174073
+	}
+}
