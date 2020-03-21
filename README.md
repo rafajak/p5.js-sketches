@@ -20,6 +20,7 @@ Note: They probably don't work well on mobile devices.
 ## 16. [Eggs](https://rafajak.github.io/p5.js-sketches/2019_09_29-eggs) [music by Raf Jakubanis]
 ## 17. [Knyp Generator](https://rafajak.github.io/p5.js-sketches/2019_10_05-tuner) [music by Raf Jakubanis]
 ## 18. [Perlin IBS3000](https://rafajak.github.io/p5.js-sketches/2019_10_12-IBS) [music by Raf Jakubanis]
+## 19. [Chaos Sierpinski Triangle](https://rafajak.github.io/p5.js-sketches/chaos-sierpinski-triangle)
 
 by Raf Jakubanis
 
