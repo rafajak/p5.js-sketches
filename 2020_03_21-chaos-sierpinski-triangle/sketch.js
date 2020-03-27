@@ -1,7 +1,7 @@
 let previous_x = 300;
-let previous_y = 300;
+let previous_y = 10;
 let new_x = 300;
-let new_y = 300;
+let new_y = 10;
 let bases = [];
 var base;
 
