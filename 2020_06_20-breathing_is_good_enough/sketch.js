@@ -7,7 +7,7 @@ function preload() {
 }
 
 function setup() {
-	cnv = createCanvas(700, 700);
+	cnv = createCanvas(displayWidth, displayHeight);
 	frameRate(50);
 
 	cnv.mouseClicked(function () {
