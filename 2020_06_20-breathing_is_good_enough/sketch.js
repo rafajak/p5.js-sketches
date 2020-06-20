@@ -7,21 +7,14 @@ function preload() {
 }
 
 function setup() {
-	cnv = createCanvas(displayWidth, displayHeight);
+	cnv = createCanvas(windowWidth, windowHeight);
 	frameRate(50);
-
 	cnv.mouseClicked(function () {
-		if (sound.isPlaying()) {
-			// sound.pause();
 
-		} else {
-
-			sound.play();
-			sound.setVolume(0.1);
-		}
+		sound.play();
+		sound.setVolume(0.5);
 		display_text = false;
 	});
-
 }
 
 function draw() {
@@ -40,15 +33,16 @@ function draw() {
 		textSize(12);
 		text("[CLICK ANYWHERE TO START] ", width / 2 - 85, height / 2 + 18)
 
-
-
 	} else {
+		noCursor();
+
 		background(0);
 		fill(255);
 		stroke(255);
 
+		i = i + 1e-2;
 		ellipse(width / 2, height / 2, 400 + sin(i) * 100)
-		i = i + 1e-2
-
+		// console.log(sin(i))
+		sound.rate(map(sin(i), -1, 1, 0.7, 0.73));
 	}
 }
