@@ -22,5 +22,5 @@ Note: They probably don't work well on mobile devices.
 ## 18. [Perlin IBS3000](https://rafajak.github.io/p5.js-sketches/2019_10_12-IBS) [music by Raf Jakubanis]
 ## 19. [Chaos Sierpinski Triangle](https://rafajak.github.io/p5.js-sketches/2020_03_21-chaos-sierpinski-triangle)
 ## 20. [Hobby: breathing](https://rafajak.github.io/p5.js-sketches/2020_06_20-breathing_is_good_enough)
-by Raf Jakubanis
+by Raf
 
